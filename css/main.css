@@ -1,0 +1,368 @@
+.hidden {
+    display: none;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero-banner {
+    position: relative;
+    overflow: hidden;
+    width: 700px;
+    height: 250px;
+    background-size: 400% 400%;
+    padding: 50px;
+    border-radius: 30px;
+    background: linear-gradient(41deg, rgba(22,0,45,1) 0%, rgba(52,0,128,1) 31%, rgba(85,84,196,1) 66%, rgba(0,212,255,1) 100%), url(../images/large/l-hero-image.png) no-repeat;
+    background-blend-mode: screen;
+    animation: idle 15s ease infinite;
+}
+
+a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.button {
+    position:absolute;
+    text-decoration: none;
+    z-index: 6;
+    font-size: 16px;
+    color: white;
+    bottom: 90px;
+    left: 345px;
+    opacity: 0;
+    border: solid 1.5px white;
+    padding: 10px 20px 10px 20px;
+    border-radius: 24px;
+    background-color: rgba(37, 0, 63, 0.375);
+    background-blend-mode: multiply;
+    filter: drop-shadow(0 2px 3px rgba(20, 0, 34, 0.43)
+    );
+    animation: button 1s ease-out 8.5s forwards;
+    transition: all 0.5s ease;
+}
+
+.button:hover {
+    background-color: rgba(37, 0, 63, 0.552);
+    transform: scale(1.1);
+}
+
+/* Objects */
+.object-1 {
+    position:absolute;
+    z-index: 1;
+    top: 130px;
+    left: 260px;
+    width: 300px;
+    transform: scale(0);
+    opacity: 0;
+    animation: logo 1s ease-out forwards;
+    filter: drop-shadow(0px 2px 3px #051845ac);
+}
+
+.object-2 {
+    position:absolute;
+    z-index: 2;
+    top: -80px;
+    left: 90px;
+    width: 180px;
+    rotate: 40deg;
+    opacity: 0;
+    animation: bcoin 2s ease-out 1s forwards;
+    filter: drop-shadow(0px 5px 5px #21002c5e);
+}
+
+.object-3 {
+    position:absolute;
+    z-index: 3;
+    bottom: 30px;
+    right: -60px;
+    width: 180px;
+    rotate: 220deg;
+    opacity: 0;
+    animation: pcoin 2s ease-out 1.5s forwards;
+    filter: drop-shadow(0px 2px 5px #2200314e);
+}
+
+.object-4 {
+    position:absolute;
+    z-index: 4;
+    bottom: -60px;
+    left: -30px;
+    width: 200px;
+    opacity: 0;
+    animation: lbcoin 2s ease-out 2s forwards;
+    filter: drop-shadow(0px 5px 5px #200037ac);
+}
+
+.object-5 {
+    position:absolute;
+    z-index: 5;
+    bottom: -100px;
+    left: 350px;
+    width: 200px;
+    opacity: 0;
+    animation: cat1 6s ease-out 3s forwards;
+    filter: drop-shadow(0px 5px 5px #11003fac);
+}
+
+.object-6 {
+    position:absolute;
+    z-index: 5;
+    top: -100px;
+    right: 100px;
+    width: 200px;
+    rotate: 180deg;
+    opacity: 0;
+    animation: cat2 6s ease-out 8.5s infinite;
+    filter: drop-shadow(0px 5px 5px #051845ac);
+}
+
+
+/* Animation */
+@keyframes idle {
+	0% {
+		background-position: 0% 75%;
+	}
+    50% {
+        background-position: 50% 25%;
+    }
+	100% {
+		background-position: 0% 75%;
+	}
+}
+
+@keyframes logo {
+    0% {
+		transform: scale(0);
+        opacity: 0;
+	}
+    75% {
+        transform: scale(1.1);
+        opacity: 100%;
+    }
+	100% {
+		transform: scale(1);
+        opacity: 100%;
+	}
+}
+
+@keyframes button {
+	0% {
+        bottom: 30px;
+        left: 345px;
+        opacity: 0;
+	}
+	100% {
+        bottom: 100px;
+        left: 345px;
+        opacity: 100%;
+	}
+}
+
+/* OBject Animations */
+@keyframes bcoin {
+    0% {
+		top: -300px;
+        left: 90px;
+        transform: scale(1);
+        opacity: 0;
+        rotate: 180deg;
+	}
+    60% {
+        top: -80px;
+        left: 90px;
+        transform: scale(1);
+        opacity: 100%;
+        rotate: 40deg;
+    }
+    85% {
+        top: -80px;
+        left: 90px;
+        transform: scale(1.1);
+        opacity: 100%;
+    }
+	100% {
+		top: -80px;
+        left: 90px;
+        transform: scale(1);
+        opacity: 100%;
+	}
+}
+
+@keyframes pcoin {
+    0% {
+		bottom: 30px;
+        right: -300px;
+        transform: scale(1);
+        opacity: 0;
+        rotate: 270deg;
+	}
+    60% {
+		bottom: 30px;
+        right: -60px;
+        transform: scale(1);
+        opacity: 100%;
+        rotate: 220deg;
+    }
+    85% {
+		bottom: 30px;
+        right: -60px;
+        transform: scale(1.1);
+        opacity: 100%;
+    }
+	100% {
+		bottom: 30px;
+        right: -60px;
+        transform: scale(1);
+        opacity: 100%;
+	}
+}
+
+@keyframes lbcoin {
+    0% {
+        bottom: -300px;
+        left: -30px;
+        transform: scale(1);
+        opacity: 0;
+        rotate: 180deg;
+	}
+    60% {
+        bottom: -60px;
+        left: -30px;
+        transform: scale(1);
+        opacity: 100%;
+        rotate: 30deg;
+    }
+    85% {
+        bottom: -60px;
+        left: -30px;
+        transform: scale(1.1);
+        opacity: 100%;
+    }
+	100% {
+        bottom: -60px;
+        left: -30px;
+        transform: scale(1);
+        opacity: 100%;
+	}
+}
+
+@keyframes cat1 {
+    0% {
+        bottom: -300px;
+        left: 350px;
+        opacity: 100%;
+	}
+    10% {
+        bottom: -90px;
+        left: 350px;
+        opacity: 100%;
+    }
+    20% {
+        bottom: -100px;
+        left: 350px;
+        opacity: 100%;
+        rotate: 0deg;
+    }
+    30% {
+        bottom: -100px;
+        left: 350px;
+        opacity: 100%;
+        rotate: 20deg;
+    }
+    50% {
+        bottom: -100px;
+        left: 350px;
+        opacity: 100%;
+        rotate: -20deg;
+    }
+    70% {
+        bottom: -100px;
+        left: 350px;
+        opacity: 100%;
+        rotate: 0deg;
+    }
+    80% {
+        bottom: -100px;
+        left: 350px;
+        opacity: 100%;
+        rotate: 0deg;
+        transform: scale(1);
+    }
+    90% {
+        bottom: -100px;
+        left: 350px;
+        opacity: 100%;
+        rotate: 0deg;
+        transform: scale(1.1);
+    }
+	100% {
+        bottom: -300px;
+        left: 350px;
+        opacity: 100%;
+        transform: scale(1.1);
+	}
+}
+
+@keyframes cat2 {
+    0% {
+        top: -300px;
+        right: 100px;
+        opacity: 100%;
+	}
+    10% {
+        top: -90px;
+        right: 100px;
+        opacity: 100%;
+    }
+    20% {
+        top: -100px;
+        right: 100px;
+        opacity: 100%;
+        rotate: 180deg;
+    }
+    30% {
+        top: -100px;
+        right: 100px;
+        opacity: 100%;
+        rotate: 200deg;
+    }
+    50% {
+        top: -100px;
+        right: 100px;
+        opacity: 100%;
+        rotate: 180deg;
+    }
+    70% {
+        top: -100px;
+        right: 100px;
+        opacity: 100%;
+        rotate: 180deg;
+    }
+    80% {
+        top: -100px;
+        right: 100px;
+        opacity: 100%;
+        rotate: 180deg;
+        transform: scale(1);
+    }
+    90% {
+        top: -100px;
+        right: 100px;
+        opacity: 100%;
+        rotate: 180deg;
+        transform: scale(1.1);
+    }
+	100% {
+        top: -300px;
+        right: 100px;
+        opacity: 100%;
+        transform: scale(1.1);
+	}
+}
